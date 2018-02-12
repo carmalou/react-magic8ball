@@ -8,10 +8,10 @@ class Answer extends Component {
   render() {
     return (
       <div className="parent">
-        ${answers[Math.floor(Math.random() * (answers.length -1))]}
+        <p>{answers[Math.floor(Math.random() * (answers.length -1))]}</p>
       </div>
     );
   }
 }
 
-export default App;
+export default Answer;
