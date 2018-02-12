@@ -11,3 +11,5 @@ Thoughts so far
 Note: Really dig the react error messages so far
 
 Note: I did have to stop the timer about half way through to figure out what was going on with my new component
+
+*** When I import the Answer component in Index.js, the app stops compiling. Error: "'App' is not defined  no-undef"
