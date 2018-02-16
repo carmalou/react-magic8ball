@@ -4,14 +4,22 @@ import './App.css';
 import Answer from './Answer';
 
 class App extends Component {
-  showOrNot = false;
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      showOrNot: false
+    };
+  }
 
   showAnswer() {
-    console.log('I got clicked!');
-    this.showOrNot = true;
+    this.setState({
+      showOrNot: true
+    });
   }
 
   render() {
+    console.log('hello from render', this.state);
     return (
       <div className="parent">
         <h1>React Magic 8-Ball!</h1>
@@ -20,9 +28,9 @@ class App extends Component {
         
         <input id="inputQuestion" /><br /><br />
 
-        <button onClick={ this.showAnswer }>Ask the Magic 8-Ball</button>
+        <button onClick={ this.showAnswer.bind(this) }>Ask the Magic 8-Ball</button>
 
-        { this.showOrNot ? <Answer /> : null }
+        { this.state.showOrNot ? <Answer /> : null }
 
       </div>
     );
